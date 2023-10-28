@@ -19,14 +19,15 @@ const Login = () => {
   `;
 
   const Label = styled.p`
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 10px;
   `;
 
-    const Flex = styled.div`
-  display: flex;`
+  const Flex = styled.div`
+    display: flex;
+  `;
 
   const Small = styled.p`
     font-size: 0.7rem;
@@ -63,7 +64,7 @@ const Login = () => {
   const More = styled.div`
     display: flex;
     justify-content: flex-end;
-    margin-right:2rem;
+    margin-right: 2rem;
     margin-top: 5px;
   `;
 
@@ -110,32 +111,34 @@ const Login = () => {
   `;
 
   const Signup = styled.div`
-    font-size: 10px;
+    font-size: 12px;
     bottom: 0;
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 6rem;
   `;
 
   const Inputtag = styled.input`
     border: none;
     border-bottom: 1px solid black;
     width: 300px;
+    color: gray;
+    padding: 10px 5px;
+    font-size: 15px;
   `;
 
   const Bold = styled.p`
     font-weight: 500;
   `;
-    
-    const LoginImg = styled.img`
-    margin-top:7rem;
-    margin-left: 6rem;
 
-    `
+  const LoginImg = styled.img`
+    margin-top: 7rem;
+    margin-left: 6rem;
+  `;
 
   return (
     <Main>
       <Left>
-        <LoginImg className="login-img" src={login} width='500' alt="" />
+        <LoginImg className="login-img" src={login} width="500" alt="" />
       </Left>
       <Right>
         <Title>Welcome back!</Title>
@@ -149,14 +152,12 @@ const Login = () => {
 
         <br />
         <Input>
-          <label htmlFor="email">Password</label>
+          <label htmlFor="password">Password</label>
           <br />
-          <Inputtag type="email" />
+          <Inputtag type="password" />
         </Input>
         <More>
-          
-            <Light>Forgot Password?</Light>
-          
+          <Light>Forgot Password?</Light>
         </More>
         <Login>Log In</Login>
         <Google>
@@ -164,7 +165,7 @@ const Login = () => {
           <P>Log in with Google</P>
         </Google>
         <Signup>
-          Don't have an account? <strong>Sign Up</strong>
+          Don't have an account? <strong> Sign Up</strong>
         </Signup>
       </Right>
     </Main>
