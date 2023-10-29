@@ -138,7 +138,7 @@ const Login = () => {
   `;
 
   return (
-    <Main>
+    <Main className="main">
       <Left className="left">
         <LoginImg className="login-img" src={login} width="500" alt="" />
       </Left>

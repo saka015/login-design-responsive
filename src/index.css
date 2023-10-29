@@ -7,7 +7,7 @@ input:focus {
   outline: none;
 }
 
-.submitBtn:active{
+.submitBtn:active {
   scale: 0.8;
   transition: all 0.3s;
 }
@@ -58,34 +58,37 @@ input:focus {
   }
 }
 
-
 /* Mobile Specific */
 
 /* CSS for screens with a width less than 768px (commonly mobile devices) */
 @media screen and (max-width: 767px) {
-    /* Your mobile-specific CSS here */
-.title{
-  font-size: 25px !important;
-}
-.title-label{
-  font-size: 10px !important;
-}
-  
-    .input-tag{
-      width: 200px !important;
-    }
+  /* Your mobile-specific CSS here */
+  .title {
+    font-size: 25px !important;
+  }
+  .title-label {
+    font-size: 10px !important;
+  }
 
-    .right-main{
-      flex: auto;
-      margin-left: -20px !important;
-    }
-    .signup{
-      margin-top: 5rem !important;
-      font-size: 10px !important;
-      margin-left: 2rem;
-    }
+  .input-tag {
+    width: 200px !important;
+  }
 
-    .google-img{
-      display: none;
-    }
+  .right-main {
+    flex: auto;
+    margin-left: -20px !important;
+  }
+  .signup {
+    margin-top: 5rem !important;
+    font-size: 10px !important;
+    margin-left: 2rem;
+  }
+
+  .google-img {
+    display: none;
+  }
+
+  .main {
+    background-color: transparent !important;
+  }
 }
