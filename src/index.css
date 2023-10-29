@@ -7,6 +7,10 @@ input:focus {
   outline: none;
 }
 
+.submitBtn:active{
+  scale: 0.8;
+  transition: all 0.3s;
+}
 @keyframes moveUpDown {
   0% {
     transform: translateY(0);
@@ -23,7 +27,7 @@ input:focus {
   animation: moveUpDown 2.3s linear infinite;
 }
 
-.login-img {
+.left {
   display: none;
 }
 
@@ -32,9 +36,8 @@ input:focus {
 /* Tablets */
 @media screen and (min-width: 768px) {
   body {
-    background-color: red;
   }
-  .login-img {
+  .left {
     display: inline-block;
   }
 
@@ -48,10 +51,41 @@ input:focus {
 @media screen and (min-width: 1024px) {
   body {
     font-size: 20px;
-    background-color: green;
   }
 
-  .login-img {
+  .left {
     display: inline-block;
   }
+}
+
+
+/* Mobile Specific */
+
+/* CSS for screens with a width less than 768px (commonly mobile devices) */
+@media screen and (max-width: 767px) {
+    /* Your mobile-specific CSS here */
+.title{
+  font-size: 25px !important;
+}
+.title-label{
+  font-size: 10px !important;
+}
+  
+    .input-tag{
+      width: 200px !important;
+    }
+
+    .right-main{
+      flex: auto;
+      margin-left: -20px !important;
+    }
+    .signup{
+      margin-top: 5rem !important;
+      font-size: 10px !important;
+      margin-left: 2rem;
+    }
+
+    .google-img{
+      display: none;
+    }
 }

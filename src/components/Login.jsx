@@ -6,10 +6,11 @@ import styled from "styled-components";
 const Login = () => {
   const Main = styled.div`
     display: flex;
-    background-color: whitesmoke;
+    background-color: lightcoral;
     border-radius: 20px;
     margin: 2rem;
     height: 90vh;
+    box-sizing: border-box;
   `;
 
   const Title = styled.h1`
@@ -51,6 +52,7 @@ const Login = () => {
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 5rem;
+    overflow: hidden;
   `;
 
   const Input = styled.div`
@@ -137,34 +139,34 @@ const Login = () => {
 
   return (
     <Main>
-      <Left>
+      <Left className="left">
         <LoginImg className="login-img" src={login} width="500" alt="" />
       </Left>
-      <Right>
-        <Title>Welcome back!</Title>
-        <Label>Please enter your details</Label>
+      <Right className="right-main">
+        <Title className="title">Welcome back!</Title>
+        <Label className="title-label">Please enter your details</Label>
 
-        <Input>
+        <Input className="input-box">
           <label htmlFor="email">Email</label>
           <br />
-          <Inputtag type="email" />
+          <Inputtag className="input-tag" type="email" />
         </Input>
 
         <br />
         <Input>
           <label htmlFor="password">Password</label>
           <br />
-          <Inputtag type="password" />
+          <Inputtag className="input-tag" type="password" />
         </Input>
         <More>
           <Light>Forgot Password?</Light>
         </More>
-        <Login>Log In</Login>
-        <Google>
-          <IMG src={google} width="20px" alt="" />
+        <Login className="submitBtn">Log In</Login>
+        <Google className="submitBtn">
+          <IMG className="google-img" src={google} width="20px" alt="" />
           <P>Log in with Google</P>
         </Google>
-        <Signup>
+        <Signup className="signup">
           Don't have an account? <strong> Sign Up</strong>
         </Signup>
       </Right>
