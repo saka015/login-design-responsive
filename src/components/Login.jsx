@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Login = () => {
   const Main = styled.div`
     display: flex;
-    background-color: lightcoral;
+    background-color: whitesmoke;
     border-radius: 20px;
     margin: 2rem;
     height: 90vh;
