@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import google from "../assets/google.svg";
 import login from "../assets/login.svg";
 import styled from "styled-components";
 
 const Login = () => {
+
+   const handleSubmit = (event) => {
+     event.preventDefault();
+   };
+
+  
+
   const Main = styled.div`
     display: flex;
     background-color: whitesmoke;
@@ -63,6 +70,7 @@ const Login = () => {
     margin-top: 15px;
     margin-left: 2rem;
   `;
+
   const More = styled.div`
     display: flex;
     justify-content: flex-end;
@@ -70,7 +78,7 @@ const Login = () => {
     margin-top: 5px;
   `;
 
-  const Login = styled.button`
+  const LoginBtn = styled.button`
     font-weight: bold;
     background-color: black;
     color: white;
@@ -82,10 +90,10 @@ const Login = () => {
     margin-bottom: 10px;
     font-size: 15px;
     margin-left: 2.5rem;
-    /* margin-right: 10px; */
     margin-top: 2rem;
   `;
-  const Google = styled.button`
+
+  const GoogleBtn = styled.button`
     display: flex;
     background-color: whitesmoke;
     color: black;
@@ -96,11 +104,10 @@ const Login = () => {
     cursor: pointer;
     margin-bottom: 10px;
     margin-left: 2.5rem;
-    /* margin-right: 10px; */
     font-weight: bold;
   `;
 
-  const IMG = styled.img`
+  const Img = styled.img`
     margin-left: auto;
     margin-right: -45px;
   `;
@@ -119,7 +126,7 @@ const Login = () => {
     margin-top: 6rem;
   `;
 
-  const Inputtag = styled.input`
+  const InputTag = styled.input`
     border: none;
     border-bottom: 1px solid black;
     width: 300px;
@@ -145,30 +152,43 @@ const Login = () => {
       <Right className="right-main">
         <Title className="title">Welcome back!</Title>
         <Label className="title-label">Please enter your details</Label>
+        <form onSubmit={handleSubmit}>
+          <Input className="input-box">
+            <label htmlFor="email">Email</label>
+            <br />
+            <InputTag
+              className="input-tag"
+              type="email"
+              name="email"
+              
+            />
+          </Input>
 
-        <Input className="input-box">
-          <label htmlFor="email">Email</label>
           <br />
-          <Inputtag className="input-tag" type="email" />
-        </Input>
-
-        <br />
-        <Input>
-          <label htmlFor="password">Password</label>
-          <br />
-          <Inputtag className="input-tag" type="password" />
-        </Input>
-        <More>
-          <Light>Forgot Password?</Light>
-        </More>
-        <Login className="submitBtn">Log In</Login>
-        <Google className="submitBtn">
-          <IMG className="google-img" src={google} width="20px" alt="" />
-          <P>Log in with Google</P>
-        </Google>
-        <Signup className="signup">
-          Don't have an account? <strong> Sign Up</strong>
-        </Signup>
+          <Input>
+            <label htmlFor="password">Password</label>
+            <br />
+            <InputTag
+              className="input-tag"
+              type="password"
+              name="password"
+            
+            />
+          </Input>
+          <More>
+            <Light>Forgot Password?</Light>
+          </More>
+          <LoginBtn className="submitBtn" type="submit">
+            Log In
+          </LoginBtn>
+          <GoogleBtn className="submitBtn" type="submit">
+            <Img className="google-img" src={google} width="20px" alt="" />
+            <P>Log in with Google</P>
+          </GoogleBtn>
+          <Signup className="signup">
+            Don't have an account? <strong> Sign Up</strong>
+          </Signup>
+        </form>
       </Right>
     </Main>
   );
